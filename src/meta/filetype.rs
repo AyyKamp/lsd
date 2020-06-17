@@ -117,7 +117,7 @@ mod test {
         let colors = Colors::new(Theme::NoLscolors);
         let file_type = FileType::new(&meta, &Permissions::from(&meta));
 
-        assert_eq!(Colour::Fixed(184).paint("."), file_type.render(&colors));
+        assert_eq!(Colour::Fixed(11).paint("."), file_type.render(&colors));
     }
 
     #[test]
@@ -130,7 +130,7 @@ mod test {
         let colors = Colors::new(Theme::NoLscolors);
         let file_type = FileType::new(&metadata, &meta.permissions);
 
-        assert_eq!(Colour::Fixed(33).paint("d"), file_type.render(&colors));
+        assert_eq!(Colour::Fixed(4).paint("d"), file_type.render(&colors));
     }
 
     #[test]
@@ -152,7 +152,7 @@ mod test {
         let colors = Colors::new(Theme::NoLscolors);
         let file_type = FileType::new(&meta, &Permissions::from(&meta));
 
-        assert_eq!(Colour::Fixed(44).paint("l"), file_type.render(&colors));
+        assert_eq!(Colour::Fixed(6).paint("l"), file_type.render(&colors));
     }
 
     #[test]
@@ -173,7 +173,7 @@ mod test {
         let colors = Colors::new(Theme::NoLscolors);
         let file_type = FileType::new(&meta, &Permissions::from(&meta));
 
-        assert_eq!(Colour::Fixed(44).paint("|"), file_type.render(&colors));
+        assert_eq!(Colour::Fixed(6).paint("|"), file_type.render(&colors));
     }
 
     #[test]
@@ -198,7 +198,7 @@ mod test {
         let colors = Colors::new(Theme::NoLscolors);
         let file_type = FileType::new(&meta, &Permissions::from(&meta));
 
-        assert_eq!(Colour::Fixed(44).paint("c"), file_type.render(&colors));
+        assert_eq!(Colour::Fixed(6).paint("c"), file_type.render(&colors));
     }
 
     #[test]
@@ -214,6 +214,6 @@ mod test {
         let colors = Colors::new(Theme::NoLscolors);
         let file_type = FileType::new(&meta, &Permissions::from(&meta));
 
-        assert_eq!(Colour::Fixed(44).paint("s"), file_type.render(&colors));
+        assert_eq!(Colour::Fixed(6).paint("s"), file_type.render(&colors));
     }
 }

@@ -112,7 +112,7 @@ mod test {
         let flags = Flags::default();
 
         assert_eq!(
-            Colour::Fixed(40).paint(creation_date.ctime().to_string()),
+            Colour::Fixed(7).paint(creation_date.ctime().to_string()),
             date.render(&colors, &flags)
         );
 
@@ -136,7 +136,7 @@ mod test {
         let flags = Flags::default();
 
         assert_eq!(
-            Colour::Fixed(42).paint(creation_date.ctime().to_string()),
+            Colour::Fixed(7).paint(creation_date.ctime().to_string()),
             date.render(&colors, &flags)
         );
 
@@ -160,7 +160,7 @@ mod test {
         let flags = Flags::default();
 
         assert_eq!(
-            Colour::Fixed(36).paint(creation_date.ctime().to_string()),
+            Colour::Fixed(7).paint(creation_date.ctime().to_string()),
             date.render(&colors, &flags)
         );
 
@@ -186,7 +186,7 @@ mod test {
         flags.date = DateFlag::Relative;
 
         assert_eq!(
-            Colour::Fixed(36).paint("2 days ago"),
+            Colour::Fixed(7).paint("2 days ago"),
             date.render(&colors, &flags)
         );
 
@@ -221,7 +221,7 @@ mod test {
         let mut flags = Flags::default();
         flags.date = DateFlag::Relative;
 
-        assert_eq!(Colour::Fixed(40).paint("now"), date.render(&colors, &flags));
+        assert_eq!(Colour::Fixed(7).paint("now"), date.render(&colors, &flags));
 
         fs::remove_file(file_path).unwrap();
     }
