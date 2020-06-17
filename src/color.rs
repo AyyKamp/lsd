@@ -183,15 +183,15 @@ impl Colors {
     fn get_light_theme_colour_map() -> HashMap<Elem, Colour> {
         let mut m = HashMap::new();
         // User / Group
-        m.insert(Elem::User, Colour::Fixed(230)); // Cornsilk1
-        m.insert(Elem::Group, Colour::Fixed(187)); // LightYellow3
+        m.insert(Elem::User, Colour::Fixed(6)); // Cornsilk1
+        m.insert(Elem::Group, Colour::Fixed(7)); // LightYellow3
 
         // Permissions
-        m.insert(Elem::Read, Colour::Green);
-        m.insert(Elem::Write, Colour::Yellow);
-        m.insert(Elem::Exec, Colour::Red);
-        m.insert(Elem::ExecSticky, Colour::Purple);
-        m.insert(Elem::NoAccess, Colour::Fixed(245)); // Grey
+        m.insert(Elem::Read, Colour::Fixed(2));
+        m.insert(Elem::Write, Colour::Fixed(11));
+        m.insert(Elem::Exec, Colour::Fixed(9));
+        m.insert(Elem::ExecSticky, Colour::Fixed(13));
+        m.insert(Elem::NoAccess, Colour::Fixed(7)); // Grey
 
         // File Types
         m.insert(
@@ -199,53 +199,53 @@ impl Colors {
                 exec: false,
                 uid: false,
             },
-            Colour::Fixed(184),
+            Colour::Fixed(11),
         ); // Yellow3
         m.insert(
             Elem::File {
                 exec: false,
                 uid: true,
             },
-            Colour::Fixed(184),
+            Colour::Fixed(11),
         ); // Yellow3
         m.insert(
             Elem::File {
                 exec: true,
                 uid: false,
             },
-            Colour::Fixed(40),
+            Colour::Fixed(2),
         ); // Green3
         m.insert(
             Elem::File {
                 exec: true,
                 uid: true,
             },
-            Colour::Fixed(40),
+            Colour::Fixed(2),
         ); // Green3
-        m.insert(Elem::Dir { uid: true }, Colour::Fixed(33)); // DodgerBlue1
-        m.insert(Elem::Dir { uid: false }, Colour::Fixed(33)); // DodgerBlue1
-        m.insert(Elem::Pipe, Colour::Fixed(44)); // DarkTurquoise
-        m.insert(Elem::SymLink, Colour::Fixed(44)); // DarkTurquoise
-        m.insert(Elem::BrokenSymLink, Colour::Fixed(124)); // Red3
-        m.insert(Elem::BlockDevice, Colour::Fixed(44)); // DarkTurquoise
-        m.insert(Elem::CharDevice, Colour::Fixed(172)); // Orange3
-        m.insert(Elem::Socket, Colour::Fixed(44)); // DarkTurquoise
-        m.insert(Elem::Special, Colour::Fixed(44)); // DarkTurquoise
+        m.insert(Elem::Dir { uid: true }, Colour::Fixed(4)); // DodgerBlue1
+        m.insert(Elem::Dir { uid: false }, Colour::Fixed(4)); // DodgerBlue1
+        m.insert(Elem::Pipe, Colour::Fixed(6)); // DarkTurquoise
+        m.insert(Elem::SymLink, Colour::Fixed(6)); // DarkTurquoise
+        m.insert(Elem::BrokenSymLink, Colour::Fixed(9)); // Red3
+        m.insert(Elem::BlockDevice, Colour::Fixed(6)); // DarkTurquoise
+        m.insert(Elem::CharDevice, Colour::Fixed(3)); // Orange3
+        m.insert(Elem::Socket, Colour::Fixed(6)); // DarkTurquoise
+        m.insert(Elem::Special, Colour::Fixed(6)); // DarkTurquoise
 
         // Last Time Modified
-        m.insert(Elem::HourOld, Colour::Fixed(40)); // Green3
-        m.insert(Elem::DayOld, Colour::Fixed(42)); // SpringGreen2
-        m.insert(Elem::Older, Colour::Fixed(36)); // DarkCyan
+        m.insert(Elem::HourOld, Colour::Fixed(7)); // Green3
+        m.insert(Elem::DayOld, Colour::Fixed(7)); // SpringGreen2
+        m.insert(Elem::Older, Colour::Fixed(7)); // DarkCyan
 
         // Last Time Modified
-        m.insert(Elem::NonFile, Colour::Fixed(245)); // Grey
-        m.insert(Elem::FileSmall, Colour::Fixed(229)); // Wheat1
-        m.insert(Elem::FileMedium, Colour::Fixed(216)); // LightSalmon1
-        m.insert(Elem::FileLarge, Colour::Fixed(172)); // Orange3
+        m.insert(Elem::NonFile, Colour::Fixed(7)); // Grey
+        m.insert(Elem::FileSmall, Colour::Fixed(3)); // Wheat1
+        m.insert(Elem::FileMedium, Colour::Fixed(5)); // LightSalmon1
+        m.insert(Elem::FileLarge, Colour::Fixed(9)); // Orange3
 
         // INode
         m.insert(Elem::INode { valid: true }, Colour::Fixed(13)); // Pink
-        m.insert(Elem::INode { valid: false }, Colour::Fixed(245)); // Grey
+        m.insert(Elem::INode { valid: false }, Colour::Fixed(7)); // Grey
 
         m
     }
